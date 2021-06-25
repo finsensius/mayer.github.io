@@ -4,20 +4,20 @@ const url_string = document.URL;
 const url = new URL(url_string);
 let sender;
 
-if (url.searchParams.get('by') != null) {
-  sender = url.searchParams.get('by');
+if (url.searchParams.get('MAYER') != null) {
+  sender = url.searchParams.get('MAYER');
 } else {
-  sender = "Adam";
+  sender = "MAYER";
 }
 
 let footer = document.getElementById("credit");
 footer.innerHTML = sender;
-footer.href = "https://www.instagram.com/adamukti/";
+footer.href = "https://www.instagram.com/mayermalau_18/";
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Hallo Sayangku", "Aku ada pertanyaan nih buat kamu?", "question").then(function () {
-    Swal.fire("Jawab yang jujur ya!").then(function () {
-      Swal.fire("Awas aja kalo boong!!", "", "error").then(function () {
+  Swal.fire("Selamat Siang Sayang Ku", ":V", "question").then(function () {
+    Swal.fire("Ingat Jawab Dengan Jujur!").then(function () {
+      Swal.fire("Awas Aja Kalo Kamu Boong!!", "", "error").then(function () {
 
         const {
           value: name
@@ -35,17 +35,17 @@ document.querySelector(".tombol").addEventListener('click', function () {
           }
         }).then(function () {
           const pertanyaan = Swal.fire({
-            title: `${nama} sayang ga sama ${sender}?`,
+            title: `${nama} , sayang ga sama ${sender}?`,
             showDenyButton: true,
             showCancelButton: false,
-            confirmButtonText: `Sayang`,
-            denyButtonText: `Gak`,
+            confirmButtonText: `SAYANG`,
+            denyButtonText: `DAONG`,
           }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
               Swal.fire(`${sender} juga sayang banget sama ${nama}`).then(function () {
                 Swal.fire({
-                  title: 'Seberapa sayang emangnya?',
+                  title: 'Emangya Kamu Seberapa Sayangnya Samaku??',
                   icon: 'question',
                   input: 'range',
                   inputLabel: 'Antara 1 - 100 ya',
@@ -62,19 +62,19 @@ document.querySelector(".tombol").addEventListener('click', function () {
                       title: `Sekarang ${nama} kangen ga sama ${sender}?`,
                       showDenyButton: true,
                       showCancelButton: false,
-                      confirmButtonText: `Kangen :(`,
-                      denyButtonText: `Gak!`,
+                      confirmButtonText: `OLO :(`,
+                      denyButtonText: `DAONG!`,
                     }).then((result) => {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
-                        Swal.fire(`Huhu iya ${sender} juga kangen ${nama} :((`).then(function () {
+                        Swal.fire(`Hehehe ${sender} Juga Kangen ${nama} :))`).then(function () {
                           Swal.fire('Terakhir deh sayang').then(function () {
                             Swal.fire('Coba klik ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('Jahat banget emang ga kangen sama pacar sendiri', '', 'error').then(function () {
-                          Swal.fire('Yaudah deh bye!')
+                        Swal.fire('OKEMA JIKA KANGEN INGAT NOMOR WA MASIH SAMA :V', '', 'error').then(function () {
+                          Swal.fire('TERIMA KASIH TELAH MELUANGKAN WAKTUMU')
                         })
                       }
                     })
@@ -82,8 +82,8 @@ document.querySelector(".tombol").addEventListener('click', function () {
                 })
               })
             } else if (result.isDenied) {
-              Swal.fire(`Yakin ga suka sama ${sender}?`, '', 'error').then(function () {
-                Swal.fire('Yaudah deh bye!')
+              Swal.fire(`Yakin Tidak Suka Sama ${sender}?`, '', 'error').then(function () {
+                Swal.fire('Yahadi OKEMA ')
               })
             }
           })
